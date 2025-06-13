@@ -13,7 +13,7 @@ function Install-Persistence{
     $EventFilterArgs = @{
         EventNamespace = 'root/cimv2'
         Name = $EventFilterName
-        Query = "SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance ISA 'Win32_PerfFormattedData_PerfOS_System' AND TargetInstance.SystemUpTime >= 240 AND TargetInstance.SystemUpTime < 325"
+        Query = "SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance ISA 'Win32_PerfFormattedData_PerfOS_System' AND TargetInstance.SystemUpTime >= 10 AND TargetInstance.SystemUpTime < 325"
         QueryLanguage = 'WQL'
     }
 
